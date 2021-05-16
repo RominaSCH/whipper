@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src"
+    },
+    "include": ["src"]
+}
+
+//이거쓰면 import ~~~ frpm "../asdad/aswww";
+//할 때 ../ 안하고 바로 /폴더/파일 해도 됨 ..이나 . 안써도!
+//근데 난 적용이 안되고 있네 뭐가 문제일까?

@@ -1,4 +1,5 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app';
+import "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -11,4 +12,8 @@ const firebaseConfig = {
 //이름은 REACT_APP_ ~~ 로 지어야 하고 Gitjub 보안을 위할 뿐
 //build 시 결국 보일 수 밖에 없게 된다.
 //.env 는 최상위 폴더에 위치해야한다.
-export default firebase.initializeApp(firebaseConfig);
+
+
+firebase.initializeApp(firebaseConfig);
+
+export const authService = firebase.auth();

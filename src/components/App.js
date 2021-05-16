@@ -1,10 +1,16 @@
-import React from "react";
-import firebase from "../firebase";
+import React, { useState } from "react";
+import { authService } from "../fireb";
 import AppRouter from "./Router";
-console.log(firebase);
 
 function App() {
-  return <AppRouter />;
+  
+  const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+  return (
+    <>
+  <AppRouter isLoggedIn={isLoggedIn}/>
+  <footer>&copy;{new Date().getFullYear()} Whipper</footer>
+  </>
+  );
 }
 
 export default App;
