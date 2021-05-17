@@ -1,19 +1,25 @@
 import React, {useState} from "react";
+import { dbService } from "../fireb";
 
 const Home = () => {
     const [whip, setWhip] = useState("");
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
+        await dbService.collection("whips").add({
+            whip,
+            createdAt: Date.now(),
+        });
+        setWhip("");
     };
-    const onChange = (e) => {
-        const {target : {value}} = e;
-        setWhip(e);
+    const onChange = (event) => {
+        const {target : {value}} = event;
+        setWhip(value);
     };
     return (
         <div>
-            <form>
+            <form onSubmit={onSubmit}>
                 <input value={whip} onChange={onChange} type="textarea" placeholder="What's on your mind?" maxLength={120} />
-                <input type="submit" placeholder="whip"
+                <input type="submit" placeholder="whip"/>
             </form>
         </div>
     );

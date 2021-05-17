@@ -57,7 +57,7 @@ const Authen = () => {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <inputs
+        <input
           name="email"
           type="email"
           placeholder="Email"
