@@ -32,7 +32,7 @@ const Authen = () => {
         //log in
         data = await authService.signInWithEmailAndPassword(email, password);
       }
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       setError(error.message);
     }
@@ -52,7 +52,7 @@ const Authen = () => {
       provider = new firebaseInstance.auth.GithubAuthProvider();
     }
     const data = await authService.signInWithPopup(provider);
-    console.log(data);
+    // console.log(data);
   };
   return (
     <div>

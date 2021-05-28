@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    align-items: center;
+}
+.whip_input{
+    border: 0;
+    background-color: beige;
+    padding: 8px 12px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.whip_submit{
+    border: 0;
+    outline: 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.whipEach{
+    width: 200px;
+    height: 50px;
+    border-bottom: 1px solid skyblue;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
